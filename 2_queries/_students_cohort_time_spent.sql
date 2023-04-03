@@ -4,7 +4,6 @@ SELECT SUM(assignment_submissions.duration)
       SELECT students.id FROM students
         WHERE cohort_id IN (
           SELECT cohorts.id FROM cohorts
-            WHERE cohorts.id = 7; 
+            WHERE cohorts.name = 'MAR12'
           )
-    )
-  GROUP BY assignment_submissions.student_id;
+    );
